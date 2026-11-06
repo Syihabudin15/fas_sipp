@@ -67,17 +67,17 @@ export default function Home() {
 
           {/* Konten Utama Kiri */}
           <div className="my-auto z-10 flex flex-col items-center">
-            <div className="p-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 mb-5 inline-block shadow-inner">
+            <div className="p-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 mb-5  shadow-inner hidden md:block">
               <img
                 src={process.env.NEXT_PUBLIC_APP_LOGO ?? "/images/app_logo.png"}
                 alt={`${process.env.NEXT_PUBLIC_APP_FULLNAME ?? "KOPJAS"} Logo`}
                 className="h-14 md:h-16 object-contain"
               />
             </div>
-            <h1 className="text-lg md:text-xl font-extrabold text-white tracking-wider uppercase">
-              {process.env.NEXT_PUBLIC_APP_FULLNAME ?? "KOPJAS / SYREL"}
+            <h1 className="text-lg md:text-xl font-extrabold text-white tracking-wider uppercase hidden md:block">
+              {process.env.NEXT_PUBLIC_APP_FULLNAME ?? "KOPJAS SJM"}
             </h1>
-            <div className="w-8 h-0.5 bg-linear-to-r from-emerald-400 to-amber-400 my-3 rounded-full"></div>
+            <div className="w-8 h-0.5 bg-linear-to-r from-emerald-400 to-amber-400 my-3 rounded-full hidden md:block"></div>
             <p className="text-xs text-white max-w-55 leading-relaxed tracking-wide hidden md:block">
               Sistem manajemen terintegrasi penjamin akurasi, keamanan, dan
               efisiensi data.
