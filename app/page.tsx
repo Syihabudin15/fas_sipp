@@ -44,19 +44,24 @@ export default function Home() {
   };
 
   return (
-    // LATAR BELAKANG BARU: Menggunakan gradasi Slate terang ke Teal yang tenang dan profesional
-    <div className="flex items-center justify-center min-h-screen bg-linear-to-br from-slate-50 via-teal-50/30 to-slate-100 p-4 sm:p-6 relative overflow-hidden">
-      {/* Dekorasi Bentuk Geometris Abstrak Ringan (Bukan lagi lingkaran blur pasaran) */}
-      <div className="absolute -top-20 -left-20 w-80 h-80 bg-emerald-500/5 rounded-full border border-emerald-500/10 pointer-events-none" />
-      <div className="absolute -bottom-40 -right-20 w-120 h-120 bg-amber-500/5 rounded-full border border-amber-500/10 pointer-events-none" />
+    <div className="relative isolate flex min-h-screen items-center justify-center overflow-hidden bg-linear-to-br from-blue-300 via-teal-50/30 to-slate-100 p-4 sm:p-6">
+      <div className="pointer-events-none absolute -left-20 -top-20 h-80 w-80 rounded-full border border-emerald-500/10 bg-emerald-500/5" />
+      <div className="pointer-events-none absolute -bottom-40 -right-20 h-120 w-120 rounded-full border border-amber-500/10 bg-amber-500/5" />
 
       {/* Container Utama dengan Bayangan Tajam Tipis (Soft Clean Edge Card) */}
-      <div className="relative w-full max-w-4xl bg-white rounded-3xl shadow-[0_20px_50px_rgba(15,23,42,0.06)] border border-slate-100 overflow-hidden flex flex-col md:flex-row min-h-125 transition-all duration-300">
+      <div className="relative z-10 flex min-h-125 w-full max-w-4xl flex-col overflow-hidden rounded-3xl border border-white/70 bg-white/95 shadow-[0_20px_50px_rgba(15,23,42,0.25)] backdrop-blur-sm transition-all duration-300 md:flex-row">
         {/* SISI KIRI: Desain Premium Monokromatik Hijau-Emas */}
-        <div className="w-full md:w-5/12 bg-slate-900 p-8 flex flex-col justify-between items-center text-center relative overflow-hidden min-h-55 md:min-h-130">
-          {/* Aksen Garis Modern Ringkas */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
-          <div className="absolute -right-16 top-1/4 w-32 h-32 bg-emerald-500/20 blur-2xl rounded-full" />
+        <div className="relative flex min-h-55 w-full flex-col items-center justify-between overflow-hidden bg-slate-900 p-8 text-center md:min-h-130 md:w-5/12">
+          <video
+            className="absolute inset-0 h-full w-full object-cover"
+            src="/login.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 bg-slate-950/55" />
 
           <div className="hidden md:block"></div>
 
@@ -73,7 +78,7 @@ export default function Home() {
               {process.env.NEXT_PUBLIC_APP_FULLNAME ?? "KOPJAS / SYREL"}
             </h1>
             <div className="w-8 h-0.5 bg-linear-to-r from-emerald-400 to-amber-400 my-3 rounded-full"></div>
-            <p className="text-xs text-slate-400/90 max-w-55 leading-relaxed tracking-wide hidden md:block">
+            <p className="text-xs text-white max-w-55 leading-relaxed tracking-wide hidden md:block">
               Sistem manajemen terintegrasi penjamin akurasi, keamanan, dan
               efisiensi data.
             </p>
@@ -81,7 +86,7 @@ export default function Home() {
 
           {/* Hak Cipta Sisi Kiri */}
           <div className="hidden md:block z-10">
-            <p className="text-[10px] text-slate-500 font-medium tracking-widest uppercase">
+            <p className="text-[10px] text-white font-medium tracking-widest uppercase">
               SECURE PLATFORM · {new Date().getFullYear()}
             </p>
           </div>

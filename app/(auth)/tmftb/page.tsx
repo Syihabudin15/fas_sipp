@@ -73,13 +73,6 @@ const DEFAULT_CASH_DESC: ICashDesc = {
   file: "",
 };
 
-// Opsi dropdown statis dipisahkan agar tidak dibuat ulang di setiap render
-const DROPPING_OPTIONS = [
-  { label: "PENDING", value: "PENDING" },
-  { label: "TRANSFER", value: "DISETUJUI" },
-  { label: "LUNAS", value: "LUNAS" },
-];
-
 const GENERAL_STATUS_OPTIONS = [
   { label: "DRAFT", value: "DRAFT" },
   { label: "PENDING", value: "PENDING" },

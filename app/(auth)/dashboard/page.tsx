@@ -7,8 +7,6 @@ import {
   StatusDapemChart,
 } from "@/components/utils/ChartUtils";
 import {
-  GetAngsuran,
-  GetDapem,
   GetDetailDapem,
   GetSisaPokokMargin,
   IDRFormat,

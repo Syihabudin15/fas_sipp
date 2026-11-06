@@ -137,7 +137,7 @@ const generateContractHtml = (record: IDapem) => {
       </div>
       ${
         record.PayOffice.code === "BANK MANTAP"
-          ? `<div class="page text-justify" style="font-size: 12px;">
+          ? `<div class="page text-justify" style="font-size: 10px;">
         ${SKPMantap(record)}
       </div>`
           : ""
