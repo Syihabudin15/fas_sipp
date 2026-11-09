@@ -144,7 +144,10 @@ export const FormCIFABS = (record?: IDapem) => {
               <p class="w-40">Nomor Identitas</p>
               <div class="min-w-0 flex-1" style="display:grid; grid-template-columns:repeat(16, minmax(0, 1fr));">
                 ${(
-                  record?.Debitur.nik?.replace(/\D/g, "").slice(0, 16).split("") || [
+                  record?.Debitur.nik
+                    ?.replace(/\D/g, "")
+                    .slice(0, 16)
+                    .split("") || [
                     "",
                     "",
                     "",
@@ -186,15 +189,15 @@ export const FormCIFABS = (record?: IDapem) => {
               <div class="flex gap-4">
                 <p style="width:32%; flex:0 0 32%; min-width:0;">Status Tempat Tinggal</p>
                 <div class="min-w-0 flex-1">
-                  <div class="flex gap-2">
+                  <div class="flex">
                     <div class="min-w-0 flex-1 flex gap-1">${FormCheck(record?.house_status?.toLowerCase() === "milik sendiri")} Rumah milik sendiri</div>
                     <div class="min-w-0 flex-1 flex gap-1">${FormCheck(record?.house_status?.toLowerCase() === "milik keluarga")} Rumah milik keluarga</div>
                   </div>
-                  <div class="flex gap-2">
+                  <div class="flex">
                     <div class="min-w-0 flex-1 flex gap-1">${FormCheck(record?.house_status?.toLowerCase() === "rumah dinas")} Rumah dinas</div>
-                    <div class="min-w-0 flex-1 flex gap-1">${FormCheck(record?.house_status?.toLowerCase() === "sewa")} Rumah sewa / Kontrak</div>
+                    <div class="min-w-0 flex-1 flex gap-1">${FormCheck(record?.house_status?.toLowerCase() === "sewa")} Rumah sewa/Kontrak</div>
                   </div>
-                  <div class="flex gap-2">
+                  <div class="flex">
                     <div class="min-w-0 flex-1 flex gap-1">${FormCheck(record?.house_status?.toLowerCase() === "kos")} Kost</div>
                   </div>
                 </div>
@@ -221,21 +224,21 @@ export const FormCIFABS = (record?: IDapem) => {
             </div>
             <div class="flex gap-2">
               <div class="min-w-0 flex-1 flex gap-1">
-                <p style="width:35%; flex:0 0 35%; min-width:0;">Nomor HP</p>
+                <p style="width:45%; flex:0 0 35%; min-width:0;">Nomor HP</p>
                 <p class="min-w-0 flex-1 border-b border-gray-700">${record?.Debitur.phone || ""}</p>
               </div>
               <div class="min-w-0 flex-1 flex gap-1">
-                <p style="width:35%; flex:0 0 35%; min-width:0;">Email</p>
+                <p style="width:45%; flex:0 0 35%; min-width:0;">Email</p>
                 <p class="min-w-0 flex-1 border-b border-gray-700"></p>
               </div>
             </div>
             <div class="flex gap-2">
               <div class="min-w-0 flex-1 flex gap-1">
-                <p style="width:35%; flex:0 0 35%; min-width:0;">Telepon Rumah</p>
+                <p style="width:45%; flex:0 0 35%; min-width:0;">Telepon Rumah</p>
                 <p class="min-w-0 flex-1 border-b border-gray-700"></p>
               </div>
               <div class="min-w-0 flex-1 flex gap-1">
-                <p style="width:35%; flex:0 0 35%; min-width:0;">Telepon Kantor</p>
+                <p style="width:45%; flex:0 0 34%; min-width:0;">Telepon Kantor</p>
                 <p class="min-w-0 flex-1 border-b border-gray-700"></p>
               </div>
             </div>
@@ -254,7 +257,7 @@ const FormCheck = (
   classstyle?: string,
 ) => {
   return `
-    <div class="${w ? w : "w-4"} h-4 flex-shrink-0 text-xs border border-gray-800 ${check ? "flex items-center justify-center" : classstyle ? classstyle : ""}">
+    <div class="${w ? w : "w-4"} h-4 shrink-0 text-xs border border-gray-800 ${check ? "flex items-center justify-center" : classstyle ? classstyle : ""}">
       ${check ? "✓" : val ? val : ""}
     </div>
   `;
