@@ -146,18 +146,24 @@ export default function ILayout({ children }: { children: React.ReactNode }) {
     <ConfigProvider
       theme={{
         token: {
-          colorPrimary: "#286344",
-          colorInfo: "#286344",
-          borderRadius: 12,
+          colorPrimary: "#2563eb",
+          colorInfo: "#2563eb",
+          borderRadius: 8,
         },
         components: {
           Menu: {
-            itemSelectedBg: "#edf5ef",
-            itemSelectedColor: "#286344",
-            itemHoverBg: "#f4f7f4",
-            itemHoverColor: "#174b38",
+            darkItemBg: "#111b2c",
+            darkSubMenuItemBg: "#111b2c",
+            darkItemSelectedBg: "#1d3554",
+            darkItemSelectedColor: "#7dd3fc",
+            darkItemHoverBg: "#1a2a40",
+            darkItemHoverColor: "#ffffff",
+            itemSelectedBg: "#eaf2ff",
+            itemSelectedColor: "#2563eb",
+            itemHoverBg: "#f3f6fb",
+            itemHoverColor: "#17243b",
             itemBorderRadius: 10,
-            itemHeight: 42,
+            itemHeight: 40,
           },
         },
       }}
@@ -166,9 +172,9 @@ export default function ILayout({ children }: { children: React.ReactNode }) {
         className="app-shell"
         style={{
           minHeight: "100vh",
-          gap: 12,
-          padding: 12,
-          backgroundColor: "#f3f5f2",
+          gap: 0,
+          padding: 0,
+          backgroundColor: "#f3f6fa",
         }}
       >
         <Sider
@@ -178,16 +184,17 @@ export default function ILayout({ children }: { children: React.ReactNode }) {
           onCollapse={(value: boolean) => setCollapsed(value)}
           width={260}
           hidden={isMobile}
-          theme="light"
+          theme="dark"
           style={{
             margin: 0,
-            borderRadius: "16px",
-            border: "1px solid #e7ece7",
-            boxShadow: "0 12px 32px rgba(31, 56, 41, 0.06)",
-            height: "calc(100vh - 24px)",
+            borderRadius: 0,
+            borderRight: "1px solid #26344a",
+            boxShadow: "none",
+            height: "100vh",
             position: "sticky",
-            top: 12,
+            top: 0,
             left: 0,
+            background: "#111b2c",
             display: "flex",
             flexDirection: "column",
             overflow: "hidden",
@@ -196,13 +203,12 @@ export default function ILayout({ children }: { children: React.ReactNode }) {
         >
           <div
             style={{
-              margin: "8px",
+              margin: "12px 10px 8px",
               padding: collapsed ? "12px 4px" : "16px",
-              borderRadius: "16px",
-              background:
-                "linear-gradient(140deg, #174b38 0%, #286344 72%, #39744e 100%)",
+              borderRadius: "12px",
+              background: "#1b2a40",
               color: "#fff",
-              boxShadow: "0 12px 24px rgba(23, 75, 56, 0.18)",
+              boxShadow: "none",
               position: "relative",
               overflow: "hidden",
               display: "flex",
@@ -219,10 +225,10 @@ export default function ILayout({ children }: { children: React.ReactNode }) {
                 borderRadius: 14,
                 display: "grid",
                 placeItems: "center",
-                color: "#f4a261",
+                color: "#67d9ef",
                 fontSize: 22,
-                background: "rgba(255,255,255,0.12)",
-                border: "1px solid rgba(255,255,255,0.16)",
+                background: "#263d5a",
+                border: "1px solid #344c6b",
                 flexShrink: 0,
               }}
             >
@@ -312,6 +318,7 @@ export default function ILayout({ children }: { children: React.ReactNode }) {
               <Button
                 size="small"
                 type="text"
+                className="!text-[#a9bad0] hover:!text-white"
                 aria-label="Ciutkan menu navigasi"
                 title="Ciutkan menu navigasi"
                 icon={<DoubleRightOutlined />}
@@ -331,13 +338,13 @@ export default function ILayout({ children }: { children: React.ReactNode }) {
               className="custom-scrollbar"
             >
               {!collapsed && (
-                <div className="px-3 pb-2 pt-3 text-[10px] font-bold uppercase tracking-[0.16em] text-[#9aa39c]">
+                <div className="px-3 pb-2 pt-3 text-[10px] font-bold uppercase tracking-[0.16em] text-[#8292aa]">
                   Menu utama
                 </div>
               )}
               <Menu
                 className="app-shell-menu"
-                theme="light"
+                theme="dark"
                 mode="inline"
                 selectedKeys={[currentMenu?.key ?? pathname]}
                 style={{
@@ -358,23 +365,23 @@ export default function ILayout({ children }: { children: React.ReactNode }) {
             className="app-shell-header"
             style={{
               margin: 0,
-              padding: "0 20px",
-              height: 72,
+              padding: "0 24px",
+              height: 68,
               lineHeight: "normal",
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              background: "#fff",
-              borderRadius: "16px",
-              border: "1px solid #e7ece7",
-              boxShadow: "0 8px 24px rgba(31, 56, 41, 0.035)",
+              background: "#ffffff",
+              borderRadius: 0,
+              borderBottom: "1px solid #e4e9f1",
+              boxShadow: "none",
               position: "sticky",
-              top: 12,
+              top: 0,
               zIndex: 10,
             }}
           >
             <div className="flex min-w-0 items-center gap-3">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#edf5ef]">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#eaf2ff]">
                 {process.env.NEXT_PUBLIC_APP_LOGO ? (
                   <Image
                     src={process.env.NEXT_PUBLIC_APP_LOGO}
@@ -385,14 +392,14 @@ export default function ILayout({ children }: { children: React.ReactNode }) {
                     className="h-full w-full object-contain p-1.5"
                   />
                 ) : (
-                  <BankOutlined className="text-base text-[#286344]" />
+                  <BankOutlined className="text-base text-[#2563eb]" />
                 )}
               </div>
               <div className="flex min-w-0 flex-col justify-center">
-                <p className="m-0 truncate text-[10px] font-bold uppercase leading-4 tracking-[0.14em] text-[#829087]">
+                <p className="m-0 truncate text-[10px] font-bold uppercase leading-4 tracking-[0.14em] text-[#8290a3]">
                   {process.env.NEXT_PUBLIC_APP_SHORTNAME || "Portal Koperasi"}
                 </p>
-                <h1 className="m-0 mt-0.5 truncate text-[15px] font-semibold leading-5 tracking-tight text-[#25372d]">
+                <h1 className="m-0 mt-0.5 truncate text-[15px] font-semibold leading-5 tracking-tight text-[#17243b]">
                   {currentPageTitle}
                 </h1>
               </div>
@@ -406,7 +413,7 @@ export default function ILayout({ children }: { children: React.ReactNode }) {
                   aria-label="Buka menu navigasi"
                   icon={<MenuOutlined />}
                   onClick={() => setMobileMenuOpen(true)}
-                  className="!h-9 !w-9 !text-[#53665a]"
+                  className="!h-9 !w-9 !text-[#52627a]"
                 />
               )}
               <Dropdown
@@ -519,7 +526,7 @@ export default function ILayout({ children }: { children: React.ReactNode }) {
                   shape="circle"
                   aria-label="Buka notifikasi"
                   title="Buka notifikasi"
-                  className="!h-10 !w-10 !bg-[#f3f6f3] !text-[#286344] hover:!bg-[#eaf2eb]"
+                  className="!h-10 !w-10 !bg-[#eef4ff] !text-[#2563eb] hover:!bg-[#e2ecff]"
                   icon={
                     <Badge count={notif.count} size="small" overflowCount={99}>
                       <BellOutlined
@@ -547,11 +554,11 @@ export default function ILayout({ children }: { children: React.ReactNode }) {
             className="custom-scrollbar app-shell-content"
             style={{
               margin: "12px 0 0",
-              background: "#fff",
-              borderRadius: "16px",
-              padding: "16px",
-              border: "1px solid #e7ece7",
-              boxShadow: "0 8px 24px rgba(31, 56, 41, 0.025)",
+              background: "#f3f6fa",
+              borderRadius: 0,
+              padding: "20px 24px",
+              border: "none",
+              boxShadow: "none",
             }}
           >
             <div>{children}</div>
@@ -584,14 +591,14 @@ export default function ILayout({ children }: { children: React.ReactNode }) {
             title={
               <div className="flex items-center gap-2">
                 <span
-                  style={{ fontWeight: 800, fontSize: 15, color: "#174b38" }}
+                  style={{ fontWeight: 800, fontSize: 15, color: "#17243b" }}
                 >
                   Navigasi
                 </span>
               </div>
             }
             styles={{
-              header: { borderBottom: "1px solid #edf0ed" },
+              header: { borderBottom: "1px solid #e4e9f1" },
               body: { padding: "8px 0" },
             }}
           >
@@ -630,24 +637,34 @@ export default function ILayout({ children }: { children: React.ReactNode }) {
             color: inherit;
             text-decoration: none;
           }
+          .app-shell-menu.ant-menu-dark {
+            background: transparent;
+          }
           .app-shell-menu .ant-menu-item {
-            margin-block: 3px;
+            margin-block: 2px;
           }
           .app-shell-menu .ant-menu-submenu-title {
             font-weight: 600;
           }
+          .app-shell .ant-layout-sider-trigger {
+            background: #1b2a40;
+            color: #a9bad0;
+          }
+          .app-shell .ant-layout-sider-trigger:hover {
+            color: #ffffff;
+          }
           @media (max-width: 599px) {
             .app-shell {
               gap: 0 !important;
-              padding: 6px !important;
+              padding: 0 !important;
             }
             .app-shell-header {
               padding: 0 12px !important;
               height: 60px !important;
             }
             .app-shell-content {
-              margin: 8px 0 0 !important;
-              padding: 10px !important;
+              margin: 0 !important;
+              padding: 12px 8px !important;
             }
           }
         `}</style>

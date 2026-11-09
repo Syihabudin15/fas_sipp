@@ -61,33 +61,33 @@ export default function Home() {
   const appLogo = process.env.NEXT_PUBLIC_APP_LOGO;
 
   return (
-    <main className="login-page relative isolate flex min-h-screen items-center justify-center overflow-hidden bg-[#f3f5f2] px-4 py-8 font-sans sm:px-8">
+    <main className="login-page relative isolate flex min-h-screen items-center justify-center overflow-hidden bg-[#f3f6fa] px-4 py-8 font-sans sm:px-8">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-28 -top-32 h-96 w-96 rounded-full border border-[#dfe8df] bg-white/50"
+        className="pointer-events-none absolute -left-28 -top-32 h-96 w-96 rounded-full border border-[#dfe5ef] bg-white/50"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-44 -right-28 h-[30rem] w-[30rem] rounded-full border border-[#f2e2d4] bg-[#f8eee5]/60"
+        className="pointer-events-none absolute -bottom-44 -right-28 h-[30rem] w-[30rem] rounded-full border border-[#dce9f5] bg-[#eaf4fb]/60"
       />
 
-      <section className="relative z-10 grid w-full max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-[0_28px_80px_rgba(37,54,42,0.14)] md:min-h-[640px] md:grid-cols-[1.02fr_0.98fr]">
-        <aside className="relative flex min-h-[300px] flex-col overflow-hidden bg-[#174b38] px-7 py-7 text-white sm:px-10 sm:py-9 md:min-h-full md:px-12 md:py-11">
+      <section       className="relative z-10 grid w-full max-w-5xl overflow-hidden rounded-[1.5rem] bg-white shadow-[0_28px_80px_rgba(23,36,59,0.16)] md:min-h-[640px] md:grid-cols-[1.02fr_0.98fr]">
+        <aside         className="relative flex min-h-[300px] flex-col overflow-hidden bg-[#17243b] px-7 py-7 text-white sm:px-10 sm:py-9 md:min-h-full md:px-12 md:py-11">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute -right-20 -top-28 h-80 w-80 rounded-full border-[34px] border-white/[0.045]"
           />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -bottom-32 -left-24 h-80 w-80 rounded-full bg-[#e77d38]/20 blur-2xl"
+            className="pointer-events-none absolute -bottom-32 -left-24 h-80 w-80 rounded-full bg-[#1782a6]/25 blur-2xl"
           />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute bottom-0 right-0 h-44 w-44 rounded-tl-[100%] bg-[#e77d38]"
+            className="pointer-events-none absolute bottom-0 right-0 h-44 w-44 rounded-tl-[100%] bg-[#2563eb]"
           />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute bottom-0 right-0 h-36 w-36 rounded-tl-[100%] bg-[#f2a05c]"
+            className="pointer-events-none absolute bottom-0 right-0 h-36 w-36 rounded-tl-[100%] bg-[#3f8bb8]"
           />
 
           <div className="relative z-10 flex items-center gap-3">
@@ -102,7 +102,7 @@ export default function Home() {
                   className="h-8 w-8 object-contain"
                 />
               ) : (
-                <BankOutlined className="text-2xl text-[#f4a261]" />
+                <BankOutlined className="text-2xl text-[#67d9ef]" />
               )}
             </div>
             <div className="min-w-0">
@@ -125,7 +125,7 @@ export default function Home() {
               <br />
               mendukung masa
               <br />
-              <span className="text-[#f4a261]">pensiun yang sejahtera.</span>
+              <span className="text-[#67d9ef]">pensiun yang sejahtera.</span>
             </h1>
             <p className="mt-5 max-w-sm text-sm leading-7 text-white/75">
               Platform kerja terpadu bagi karyawan dan mitra koperasi untuk
@@ -135,7 +135,7 @@ export default function Home() {
 
           <div className="relative z-10 grid max-w-md grid-cols-2 gap-3 sm:gap-4">
             <div className="rounded-2xl border border-white/10 bg-white/[0.07] p-3.5 backdrop-blur-sm sm:p-4">
-              <SafetyCertificateOutlined className="text-lg text-[#f4a261]" />
+              <SafetyCertificateOutlined className="text-lg text-[#67d9ef]" />
               <p className="mt-2 text-xs font-semibold text-white">
                 Akses kerja terlindungi
               </p>
@@ -144,7 +144,7 @@ export default function Home() {
               </p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/[0.07] p-3.5 backdrop-blur-sm sm:p-4">
-              <HeartOutlined className="text-lg text-[#f4a261]" />
+              <HeartOutlined className="text-lg text-[#67d9ef]" />
               <p className="mt-2 text-xs font-semibold text-white">
                 Kolaborasi mitra
               </p>
@@ -161,13 +161,13 @@ export default function Home() {
         <div className="flex items-center px-7 py-10 sm:px-12 md:px-14 lg:px-16">
           <div className="mx-auto w-full max-w-sm">
             <div className="mb-8">
-              <span className="inline-flex rounded-full bg-[#edf5ef] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-[#286344]">
+              <span className="inline-flex rounded-full bg-[#eaf2ff] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-[#2563eb]">
                 Portal Internal Karyawan & Mitra
               </span>
-              <h2 className="mt-5 text-3xl font-semibold tracking-tight text-[#26352d]">
+              <h2 className="mt-5 text-3xl font-semibold tracking-tight text-[#17243b]">
                 Selamat datang
               </h2>
-              <p className="mt-2 text-sm leading-6 text-[#7b857f]">
+              <p className="mt-2 text-sm leading-6 text-[#728096]">
                 Masuk untuk mengelola layanan dan operasional koperasi.
               </p>
             </div>
@@ -181,7 +181,7 @@ export default function Home() {
             >
               <Form.Item
                 label={
-                  <span className="text-xs font-semibold text-[#4f5c54]">
+                  <span className="text-xs font-semibold text-[#49566b]">
                     ID Pengguna
                   </span>
                 }
@@ -192,17 +192,17 @@ export default function Home() {
                 className="mb-5"
               >
                 <Input
-                  prefix={<UserOutlined className="mr-1 text-[#8d9a91]" />}
+                  prefix={<UserOutlined className="mr-1 text-[#8190a4]" />}
                   placeholder="Masukkan ID pengguna"
                   size="large"
-                  style={{ borderRadius: "12px", height: "48px" }}
-                  className="border-[#dfe5df] text-sm hover:border-[#568267] focus:border-[#286344]"
+                  style={{ borderRadius: "10px", height: "48px" }}
+                  className="border-[#dbe3ee] text-sm hover:border-[#4c78bd] focus:border-[#2563eb]"
                 />
               </Form.Item>
 
               <Form.Item
                 label={
-                  <span className="text-xs font-semibold text-[#4f5c54]">
+                  <span className="text-xs font-semibold text-[#49566b]">
                     Kata Sandi
                   </span>
                 }
@@ -213,17 +213,17 @@ export default function Home() {
                 className="mb-4"
               >
                 <Input.Password
-                  prefix={<LockOutlined className="mr-1 text-[#8d9a91]" />}
+                  prefix={<LockOutlined className="mr-1 text-[#8190a4]" />}
                   placeholder="Masukkan kata sandi"
                   size="large"
-                  style={{ borderRadius: "12px", height: "48px" }}
-                  className="border-[#dfe5df] text-sm hover:border-[#568267] focus:border-[#286344]"
+                  style={{ borderRadius: "10px", height: "48px" }}
+                  className="border-[#dbe3ee] text-sm hover:border-[#4c78bd] focus:border-[#2563eb]"
                 />
               </Form.Item>
 
               <div className="pb-2">
                 <Form.Item name="rememberMe" valuePropName="checked" noStyle>
-                  <Checkbox className="text-xs text-[#707b73]">
+                  <Checkbox className="text-xs text-[#66748a]">
                     Ingat saya di perangkat ini
                   </Checkbox>
                 </Form.Item>
@@ -241,24 +241,24 @@ export default function Home() {
                   style={{
                     height: "48px",
                     borderRadius: "12px",
-                    backgroundColor: "#286344",
-                    boxShadow: "0 8px 18px rgba(40, 99, 68, 0.18)",
+                    backgroundColor: "#2563eb",
+                    boxShadow: "0 8px 18px rgba(37, 99, 235, 0.2)",
                   }}
-                  className="border-none text-sm font-semibold tracking-wide transition-all hover:!bg-[#1d5035] active:scale-[0.99]"
+                  className="border-none text-sm font-semibold tracking-wide transition-all hover:!bg-[#1d4ed8] active:scale-[0.99]"
                 >
                   Masuk ke akun
                 </Button>
               </Form.Item>
             </Form>
 
-            <div className="mt-8 flex items-start gap-3 rounded-2xl bg-[#f5f7f4] p-4">
-              <SafetyCertificateOutlined className="mt-0.5 text-base text-[#568267]" />
-              <p className="text-[11px] leading-5 text-[#778179]">
+            <div className="mt-8 flex items-start gap-3 rounded-2xl bg-[#f2f5fa] p-4">
+              <SafetyCertificateOutlined className="mt-0.5 text-base text-[#4c78bd]" />
+              <p className="text-[11px] leading-5 text-[#728096]">
                 Jaga kerahasiaan ID pengguna dan kata sandi Anda. Pastikan
                 keluar setelah menggunakan perangkat bersama.
               </p>
             </div>
-            <p className="mt-7 text-center text-[10px] font-medium text-[#a0a9a2]">
+            <p className="mt-7 text-center text-[10px] font-medium text-[#98a4b5]">
               Bersinergi melayani kesejahteraan di masa purna tugas.
             </p>
           </div>
@@ -278,13 +278,13 @@ export default function Home() {
               font-family: var(--font-geist-sans), sans-serif !important;
         }
         .login-page .ant-checkbox-checked .ant-checkbox-inner {
-          background-color: #286344 !important;
-          border-color: #286344 !important;
+          background-color: #2563eb !important;
+          border-color: #2563eb !important;
         }
         .login-page .ant-checkbox-wrapper:hover .ant-checkbox-inner,
         .login-page .ant-checkbox:hover .ant-checkbox-inner,
         .login-page .ant-checkbox-input:focus + .ant-checkbox-inner {
-          border-color: #568267 !important;
+          border-color: #4c78bd !important;
         }
       `}</style>
     </main>

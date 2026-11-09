@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -35,8 +35,18 @@ export default function RootLayout({
           theme={{
             token: {
               fontFamily: "var(--font-geist-mono)",
-              borderRadius: 10,
+              borderRadius: 8,
               fontSize: 13,
+              colorPrimary: "#2563eb",
+              colorInfo: "#2563eb",
+            },
+            components: {
+              Table: {
+                cellPaddingBlock: 8,
+                cellPaddingInline: 10,
+                cellPaddingBlockSM: 5,
+                cellPaddingInlineSM: 7,
+              },
             },
           }}
           locale={locale}

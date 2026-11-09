@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f3f6fa;
+  --foreground: #17243b;
 }
 
 @theme inline {
@@ -12,15 +12,55 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.ant-table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.ant-table-wrapper .ant-table {
+  font-size: 12px;
+}
+
+.ant-table-wrapper .ant-table-thead > tr > th {
+  padding: 8px 10px !important;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.ant-table-wrapper .ant-table-tbody > tr > td {
+  padding: 7px 10px !important;
+  line-height: 1.35;
+}
+
+.ant-table-wrapper .ant-table-cell {
+  word-break: normal;
+}
+
+.ant-table-wrapper .ant-pagination {
+  font-size: 11px;
+}
+
+@media (max-width: 640px) {
+  .ant-table-wrapper .ant-table {
+    font-size: 10.5px;
+  }
+
+  .ant-table-wrapper .ant-table-thead > tr > th {
+    padding: 5px 7px !important;
+    font-size: 10px;
+  }
+
+  .ant-table-wrapper .ant-table-tbody > tr > td {
+    padding: 5px 7px !important;
+  }
+
+  .ant-table-wrapper .ant-pagination {
+    margin-block: 10px !important;
+  }
 }

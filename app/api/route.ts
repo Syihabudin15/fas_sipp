@@ -26,6 +26,10 @@ export const GET = async (req: NextRequest) => {
         select: {
           plafond: true,
           dropping_status: true,
+          slik_status: true,
+          verif_status: true,
+          approv_status: true,
+          created_at: true,
         },
       }),
       prisma.dapem.findMany({
